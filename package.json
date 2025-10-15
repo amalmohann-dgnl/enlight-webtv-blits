@@ -8,29 +8,38 @@
     "start": "npm run dev",
     "lint": "eslint '**/*.js'",
     "lint:fix": "eslint '**/*.js' --fix",
-    "build": "vite build",
-    "dev": "vite dev --host",
+    "build": "nx vite:build",
+    "dev": "nx serve dev --host",
     "postinstall": "husky"
   },
   "devDependencies": {
-    "vite": "^5.4.8",
-    "typescript": "^5.6.3",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.11.1",
+    "@nx/eslint": "21.6.4",
+    "@nx/vite": "21.6.4",
+    "@nx/web": "21.6.4",
+    "@vitest/ui": "^3.0.0",
     "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.9.0",
     "husky": "^9.1.6",
+    "jiti": "2.4.2",
     "lint-staged": "^15.2.10",
-    "prettier": "^3.3.3"
+    "nx": "21.6.4",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.8",
+    "vitest": "^3.0.0"
   },
   "dependencies": {
-    "@lightningjs/blits": "^1.40.1"
+    "@lightningjs/blits": "^1.40.1",
+    "nx": "^21.6.4"
   },
   "lint-staged": {
     "*.js": [
       "eslint --fix"
     ]
-  }
+  },
+  "nx": {}
 }
